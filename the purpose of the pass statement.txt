@@ -1,0 +1,1 @@
+What is the purpose of the pass statement in a function? The pass statement is a placeholder that does nothing when executed. It's often used as a placeholder when you're defining a function but don't have the code implementation ready yet.

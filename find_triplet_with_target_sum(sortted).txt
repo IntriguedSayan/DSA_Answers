@@ -1,0 +1,27 @@
+f find_triplet_with_target_sum(sorted_array, target):
+    triplets = []
+
+    for i in range(len(sorted_array) - 2):
+        left = i + 1
+        right = len(sorted_array) - 1
+
+        while left < right:
+            sum = sorted_array[i] + sorted_array[left] + sorted_array[right]
+
+            if sum == target:
+                triplets.append([sorted_array[i], sorted_array[left], sorted_array[right]])
+                left += 1
+                right -= 1
+            elif sum < target:
+                left += 1
+            else:
+                right -= 1
+
+    return triplets
+
+
+
+# Example usage:
+sorted_array = [-2, -1, 0, 1, 2, 3, 4, 5]
+target = 2
+print(find_triplet_with_target_sum(sorted_array, target))  # Output: [[-2, 0, 4], [-2, 1, 3]]

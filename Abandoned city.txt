@@ -1,0 +1,20 @@
+left = 0  # Left pointer
+    current_sum = 0  # Current sum of coins
+    min_distance = float('inf')  # Initialize the minimum distance
+
+    for right in range(n):
+        current_sum += coins[right]
+
+        # Check if the current sum is greater than or equal to the target
+        if current_sum >= target:
+            # Shrink the window from the left until the sum is less than or equal to the target
+            while current_sum - coins[left] >= target:
+                current_sum -= coins[left]
+                left += 1
+            # Update the minimum distance
+            min_distance = min(min_distance, right - left + 1)
+
+    if min_distance == float('inf'):
+        return -1  # If it's not possible to collect the target number of coins
+
+    return min_distance

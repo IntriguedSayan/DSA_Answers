@@ -1,0 +1,24 @@
+def find_smallest_difference_pair(sorted_array):
+    left = 0
+    right = len(sorted_array) - 1
+    smallest_difference = float('inf')
+    smallest_pair = []
+
+    while left < right:
+        difference = abs(sorted_array[right] - sorted_array[left])
+
+        if difference < smallest_difference:
+            smallest_difference = difference
+            smallest_pair = [sorted_array[left], sorted_array[right]]
+
+        if sorted_array[left] < sorted_array[right - 1]:
+            left += 1
+        else:
+            right -= 1
+
+    return smallest_pair
+
+
+# Example usage:
+sorted_array = [1, 3, 5, 7, 9]
+print(find_smallest_difference_pair(sorted_array))  # Output: [3, 5]

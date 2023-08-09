@@ -1,0 +1,16 @@
+def longest_subarray_with_sum_divisible_by_k(nums, k):
+    max_length = 0
+    sum = 0
+    sum_map = {0: -1}
+
+    for i in range(len(nums)):
+        sum = (sum + nums[i]) % k
+        if sum < 0: 
+            sum += k
+
+        if sum not in sum_map:
+            sum_map[sum] = i
+        else:
+            max_length = max(max_length, i - sum_map[sum])
+
+    return max_length
