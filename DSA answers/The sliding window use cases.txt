@@ -1,0 +1,4 @@
+Space efficiency: The sliding window technique often uses a constant amount of extra space, making it memory-efficient compared to other approaches that may require additional data structures.
+Time efficiency: The sliding window technique can achieve linear time complexity, making it efficient for processing large datasets.
+Simplified logic: The sliding window technique reduces the complexity of the problem by breaking it down into smaller subproblems, allowing for simpler and more manageable code.
+Real-time processing: The sliding window technique is well-suited for scenarios where data is received or processed in a continuous or streaming manner, as it can adapt to changing input dynamically.

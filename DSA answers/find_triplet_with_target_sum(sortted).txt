@@ -1,4 +1,4 @@
-f find_triplet_with_target_sum(sorted_array, target):
+ find_triplet_with_target_sum(sorted_array, target):
     triplets = []
 
     for i in range(len(sorted_array) - 2):

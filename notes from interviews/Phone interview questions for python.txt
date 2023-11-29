@@ -1,0 +1,5 @@
+1> How arguments are passed in the function for python? By referrence or, by values
+
+2> What's the difference between shallow copy & deep copy in python
+
+3? What's the difference between == and is in python

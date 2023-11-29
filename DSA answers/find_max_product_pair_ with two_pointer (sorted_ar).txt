@@ -1,0 +1,26 @@
+def find_max_product_pair(sorted_array):
+    left = 0
+    right = len(sorted_array) - 1
+    max_product = float('-inf')
+    max_pair = []
+
+    while left < right:
+        product = sorted_array[left] * sorted_array[right]
+
+        if product > max_product:
+            max_product = product
+            max_pair = [sorted_array[left], sorted_array[right]]
+
+        if sorted_array[left] < sorted_array[right - 1]:
+            left += 1
+        else:
+            right -= 1
+
+    return max_pair
+
+
+# Example usage:
+sorted_array = [-5, -2, 0, 3, 7, 9]
+print(find_max_product_pair(sorted_array))  # Output: [-5, 9]
+
+

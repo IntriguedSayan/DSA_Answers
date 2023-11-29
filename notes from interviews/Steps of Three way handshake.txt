@@ -1,0 +1,5 @@
+Steps:
+SYN: Client sends a SYN (synchronize) packet to server.
+SYN-ACK: Server sends back a SYN-ACK (acknowledgment).
+ACK: Client sends an ACK. Connection established.
+Role: Ensures both sides are ready for data transmission, and establishes connection parameters.

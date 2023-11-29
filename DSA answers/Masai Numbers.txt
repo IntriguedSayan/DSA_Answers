@@ -1,0 +1,33 @@
+def find_G(arr):
+    stack = []
+    result = [-1] * len(arr)
+    for i in range(len(arr)):
+        while stack and arr[i] > arr[stack[-1]]:
+            result[stack.pop()] = i
+        stack.append(i)
+    return result
+def find_S(arr):
+    stack = []
+    result = [-1] * len(arr)
+    for i in range(len(arr)):
+        while stack and arr[i] < arr[stack[-1]]:
+            result[stack.pop()] = i
+        stack.append(i)
+    return result
+N = int(input())
+A = [int(input()) for i in range(N)]
+greater = find_G(A)
+smaller = find_S(A)
+result = []
+for i in range(N):
+    f = greater[i]
+    if f != -1:
+        g = smaller[f]
+        if g != -1:
+            result.append(A[g])
+        else:
+            result.append(-1)
+    else:
+        result.append(-1)
+
+print(" ".join(map(str, result)))

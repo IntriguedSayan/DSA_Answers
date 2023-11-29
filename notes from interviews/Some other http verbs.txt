@@ -1,0 +1,4 @@
+Control the type of operation to be performed.
+HEAD: Fetch headers without the body. Useful for testing hyperlink validity.
+OPTIONS: Discover communication options. Provides methods supported by a URL.
+CONNECT: For use with network gateways, often related to establishing network connections for proxies.

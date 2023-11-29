@@ -1,0 +1,12 @@
+ stk = [];
+    
+    for i in st:
+        if(len(stk)!=0 and stk[-1]==i):
+            stk.pop(len(stk)-1);
+        else:
+            stk.append(i);
+    
+    if(len(stk)==0):
+        print("Empty String");
+    else:
+        print("".join(stk));

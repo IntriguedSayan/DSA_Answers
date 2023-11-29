@@ -1,0 +1,5 @@
+sir please explain the algorithm of evaluate mathematical expression using stack question .How to approach ? 
+
+because this is also one of the standard question of stack ds
+
+ex:-- (2+3)*5-8

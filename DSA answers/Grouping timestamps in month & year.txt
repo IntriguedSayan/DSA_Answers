@@ -1,0 +1,12 @@
+from collections import defaultdict
+from datetime import datetime
+
+def group_by_month_year(timestamps):
+    grouped_data = defaultdict(list)
+    
+    for ts in timestamps:
+        dt_object = datetime.strptime(ts, "%Y-%m-%d %H:%M:%S")
+        key = f"{dt_object.month}-{dt_object.year}"
+        grouped_data[key].append(ts)
+        
+    return grouped_data

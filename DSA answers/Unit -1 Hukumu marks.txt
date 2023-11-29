@@ -1,0 +1,11 @@
+Did the student maintain consistent communication while coding or solving DSA problems - 0
+
+Did the student provide answers that were precise and easy to understand - 0.75
+
+Did the student display enthusiasm, energy, and confidence in his/her communication - 0.5	
+
+Did the student actively engaged in the task and discussions - 0.75
+
+Was the student able to provide insightful and accurate explanations when asked - 0.75
+
+Was the student able to articulate his/her thoughts effectively as they progressed in the interview - 0.5
